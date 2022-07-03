@@ -1,0 +1,13 @@
+.wrapper-image {
+  flex: 0 0 calc(25% - 16px);
+}
+
+.wrapper-image:hover {
+  cursor: pointer;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 234px;
+}

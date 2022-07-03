@@ -1,0 +1,13 @@
+.search-bar {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 450px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #101014;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
