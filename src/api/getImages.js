@@ -1,8 +1,8 @@
-const key = ''
-const url = `https://api.unsplash.com//search/photos/?client_id=${key}&page=1&per_page=20&query=`
+const KEY = 'g-ZdJX-YpVaeXc5nZg8dG01S0fiMqFv8-77WW-y4jEU'
+const URL = `https://api.unsplash.com//search/photos/?client_id=${KEY}&page=1&per_page=20&query=`
 
 const getImages = (value) =>
-  fetch(url + value)
+  fetch(URL + value)
     .then((res) => {
       if (res.ok) {
         return res.json()

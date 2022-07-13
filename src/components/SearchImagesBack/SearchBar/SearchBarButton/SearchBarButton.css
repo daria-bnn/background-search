@@ -1,0 +1,58 @@
+.SearchBar-Button {
+  width: 60px;
+  height: 50px;
+  margin: 10px;
+
+  background-color: #fff;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+
+  transition: all 0.3s ease;
+}
+
+.SearchBar-Button:disabled {
+  background-color: #ccc;
+}
+
+.SearchBar-Button .SearchBar-IconSearch {
+  position: relative;
+
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+
+  transform: rotate(45deg);
+}
+
+.SearchBar-Button .SearchBar-IconSearch::before {
+  position: absolute;
+  top: 18px;
+  left: 9px;
+
+  width: 4px;
+  height: 11px;
+
+  background: #fe5f55;
+  border-radius: 2px;
+
+  content: '';
+}
+
+.SearchBar-Button .SearchBar-IconSearch::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 14px;
+  height: 14px;
+
+  border: 4px solid #fe5f55;
+  border-radius: 16px;
+
+  content: '';
+}
+
+.SearchBar-Button:hover {
+  cursor: pointer;
+}

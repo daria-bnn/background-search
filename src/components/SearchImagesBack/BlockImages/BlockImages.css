@@ -1,0 +1,7 @@
+.BlockImages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding-bottom: 32px;
+}

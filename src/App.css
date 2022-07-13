@@ -1,24 +1,7 @@
-.app {
-  background-color: #212129;
-  background-size: cover;
-  background-position: 0 center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #000;
+.App {
   overflow: hidden;
-}
 
-.wrapper {
-  padding-right: calc(50% - 500px);
-  padding-left: calc(50% - 500px);
-}
+  color: #000;
 
-.block-images {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 16px;
+  background-color: #212129;
 }
