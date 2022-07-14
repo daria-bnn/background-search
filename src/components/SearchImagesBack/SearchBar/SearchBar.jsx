@@ -15,14 +15,14 @@ import getImages from '../../../api/getImages'
 export const cnSearchBar = cn('SearchBar')
 
 const SearchBar = ({ getData }) => {
-  const inputValue = useGetValue('')
+  const useInputValue = useGetValue('')
 
   const [error, setError] = useState('')
 
   const onSubmit = async (e) => {
     e.preventDefault()
 
-    getImages(inputValue.value)
+    getImages(useInputValue.value)
       .then((data) => {
         getData(data)
       })
@@ -37,9 +37,9 @@ const SearchBar = ({ getData }) => {
 
   return (
     <form onSubmit={onSubmit} className={cnSearchBar()}>
-      <SearchBarInput getValue={inputValue} />
+      <SearchBarInput getValue={useInputValue} />
       {error && <ErrorSearch error={error} />}
-      <SearchBarButton valid={inputValue.valid} />
+      <SearchBarButton valid={useInputValue.valid} />
     </form>
   )
 }
