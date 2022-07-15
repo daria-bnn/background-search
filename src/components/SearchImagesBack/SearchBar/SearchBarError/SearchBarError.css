@@ -1,0 +1,7 @@
+.SearchBar-Error {
+  position: absolute;
+  right: -40%;
+  bottom: 27.5px;
+
+  color: #fff;
+}
