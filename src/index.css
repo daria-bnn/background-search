@@ -1,11 +1,3 @@
-@font-face {
-  font-family: Rajdhani;
-  src: local('Rajdhani'),
-    url('./assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
-}
-
 body {
   margin: 0;
-
-  font-family: Montserrat, sans-serif;
 }

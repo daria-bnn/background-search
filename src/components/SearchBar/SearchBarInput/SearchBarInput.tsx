@@ -18,7 +18,7 @@ const SearchBarInput: FC<TSearchBarInput> = ({ value, onChange }) => {
   return (
     <input
       value={value}
-      placeholder="Введите слово"
+      placeholder="Найдите фоновую картинку по душе"
       onChange={handleChange}
       className={cnSearchBar('Input')}
     />

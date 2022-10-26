@@ -3,8 +3,7 @@ import React, { FC, useState } from 'react'
 import cnSearchBar from './SearchBar.classname'
 import SearchBarInput from './SearchBarInput/SearchBarInput'
 import SearchBarButton from './SearchBarButton/SearchBarButton'
-import { useAppDispatch, useAppSelector } from '../../store/hooks/storeHelpers'
-import { selectError } from '../../store/selectors/photoSelectors'
+import { useAppDispatch } from '../../store/hooks/storeHelpers'
 import thunkFetchPhotosUnplash from '../../store/thunks/photoThunk'
 
 import './SearchBar.css'
@@ -13,9 +12,7 @@ const SearchBar: FC = () => {
   const [value, setValue] = useState('')
 
   const dispatch = useAppDispatch()
-  const error = useAppSelector(selectError)
-
-  const onSubmit = async (e) => {
+  const onSubmit = async (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     dispatch(thunkFetchPhotosUnplash(value))
@@ -24,7 +21,6 @@ const SearchBar: FC = () => {
   return (
     <form onSubmit={onSubmit} className={cnSearchBar()}>
       <SearchBarInput value={value} onChange={setValue} />
-      {error && <div className={cnSearchBar('Error')}>{error}</div>}
       <SearchBarButton />
     </form>
   )

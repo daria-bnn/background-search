@@ -1,37 +1,28 @@
-import React, { FC, useState } from 'react'
-import { cn } from '@bem-react/classname'
+import React, { FC } from 'react'
 
+import cnSearchImagesBack from './SearchImagesBack.classname'
 import SearchBar from '../SearchBar/SearchBar'
-import BlockImages from '../BlockImages/BlockImages'
+import Images from '../Images/Images'
+import { useAppSelector } from '../../store/hooks/storeHelpers'
+import {
+  selectError,
+  selectLoadingPhoto,
+} from '../../store/selectors/photoSelectors'
 
 import './SearchImagesBack.css'
 
-const cnSearchImagesBack = cn('SearchImagesBack')
-
 const SearchImagesBack: FC = () => {
-  const [data, setData] = useState('')
-  const [src, setSrc] = useState('')
-
-  const getData = (arrayImg) => {
-    setData(arrayImg)
-  }
-
-  const chooseBack = (event) => {
-    if (event.target.src) {
-      setSrc(event.target.src)
-      setData('')
-    }
-  }
+  const currentBG = useAppSelector(selectLoadingPhoto)
 
   return (
     <div
       className={cnSearchImagesBack()}
       style={{
-        backgroundImage: `url(${src})`,
+        backgroundImage: `url(${''})`,
       }}
     >
       <SearchBar />
-      {/* {data && <BlockImages chooseBack={chooseBack} data={data} />} */}
+      <Images />
     </div>
   )
 }

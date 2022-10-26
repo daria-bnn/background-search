@@ -1,7 +1,17 @@
 .App {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: 40px;
+  padding-right: calc(50% - 600px);
+  padding-bottom: 40px;
+  padding-left: calc(50% - 600px);
+
   overflow: hidden;
 
   color: #000;
 
   background-color: #212129;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

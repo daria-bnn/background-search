@@ -1,4 +1,6 @@
-import TPhoto from '../../types/photo'
+/* eslint-disable default-param-last */
+import { AnyAction } from '@reduxjs/toolkit'
+import { Photo } from 'react-photo-album'
 
 import {
   ActionsPhoto,
@@ -8,7 +10,7 @@ import {
 } from '../actions/photoActaions'
 
 type TPhotoState = {
-  photos: TPhoto[]
+  photos: Photo[]
   loading: boolean
   error: null | string
 }
@@ -18,10 +20,9 @@ const initialState: TPhotoState = {
   loading: false,
   error: null,
 }
-
 const photosReducer = (
   state = initialState,
-  action: ActionsPhoto
+  action: ActionsPhoto | AnyAction
 ): TPhotoState => {
   switch (action.type) {
     case ACTION_START_LOADING:
