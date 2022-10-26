@@ -1,4 +1,4 @@
-const KEY = 'g-ZdJX-YpVaeXc5nZg8dG01S0fiMqFv8-77WW-y4jEU'
+const KEY = ''
 const URL = `https://api.unsplash.com//search/photos/?client_id=${KEY}&page=1&per_page=20&query=`
 
 const getImages = (value) =>

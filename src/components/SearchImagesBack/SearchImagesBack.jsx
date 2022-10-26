@@ -1,11 +1,10 @@
 import { useState } from 'react'
-
 import { cn } from '@bem-react/classname'
 
-import './SearchImagesBack.css'
+import SearchBar from '../SearchBar/SearchBar'
+import BlockImages from '../BlockImages/BlockImages'
 
-import SearchBar from './SearchBar/SearchBar'
-import BlockImages from './BlockImages/BlockImages'
+import './SearchImagesBack.css'
 
 const cnSearchImagesBack = cn('SearchImagesBack')
 

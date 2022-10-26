@@ -1,18 +1,13 @@
 import { useState } from 'react'
 
-import { cn } from '@bem-react/classname'
+import cnSearchBar from './SearchBar.classname'
+import getImages from '../../api/getImages'
+import useGetValue from './hooks/useGetValue'
+import SearchBarInput from './SearchBarInput/SearchBarInput'
+import SearchBarButton from './SearchBarButton/SearchBarButton'
+import SearchBarError from './SearchBarError/SearchBarError'
 
 import './SearchBar.css'
-
-import useGetValue from './hooks/useGetValue'
-
-import SearchBarInput from './SearchBarInput/SearchBar'
-import SearchBarButton from './SearchBarButton/SearchBarButton'
-import ErrorSearch from './SearchBarError/ErrorSearch'
-
-import getImages from '../../../api/getImages'
-
-export const cnSearchBar = cn('SearchBar')
 
 const SearchBar = ({ getData }) => {
   const useInputValue = useGetValue('')
@@ -38,7 +33,7 @@ const SearchBar = ({ getData }) => {
   return (
     <form onSubmit={onSubmit} className={cnSearchBar()}>
       <SearchBarInput getValue={useInputValue} />
-      {error && <ErrorSearch error={error} />}
+      {error && <SearchBarError error={error} />}
       <SearchBarButton valid={useInputValue.valid} />
     </form>
   )

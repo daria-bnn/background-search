@@ -1,12 +1,10 @@
-import { cn } from '@bem-react/classname'
+import cnSearchBar from '../SearchBar.classname'
 
 import './SearchBarButton.css'
 
-const cnSearchBar = cn('SearchBar')
-
 const SearchBarButton = ({ valid }) => (
   <button type="submit" disabled={!valid} className={cnSearchBar('Button')}>
-    <span className={cnSearchBar('IconSearch')} />
+    <span className={cnSearchBar('ButtonIcon')} />
   </button>
 )
 

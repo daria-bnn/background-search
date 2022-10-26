@@ -1,8 +1,6 @@
-import { cn } from '@bem-react/classname'
+import cnSearchBar from '../SearchBar.classname'
 
 import './SearchBarInput.css'
-
-const cnSearchBar = cn('SearchBar')
 
 const SearchBarInput = ({ getValue }) => {
   const { value, onChange } = getValue

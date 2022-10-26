@@ -1,10 +1,8 @@
-import { cn } from '@bem-react/classname'
-
-import "./BlockImages.css"
-
 import BlockImagesImage from './BlockImagesImage/BlockImagesImage'
 
-const cnBlockImages = cn('BlockImages')
+import cnBlockImages from './BlockImages.classname'
+
+import './BlockImages.css'
 
 const BlockImages = ({ chooseBack, data }) => (
   <div

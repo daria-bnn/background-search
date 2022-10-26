@@ -15,7 +15,7 @@
   background-color: #ccc;
 }
 
-.SearchBar-Button .SearchBar-IconSearch {
+.SearchBar-Button .SearchBar-ButtonIcon {
   position: relative;
 
   display: inline-block;
@@ -25,7 +25,7 @@
   transform: rotate(45deg);
 }
 
-.SearchBar-Button .SearchBar-IconSearch::before {
+.SearchBar-Button .SearchBar-ButtonIcon::before {
   position: absolute;
   top: 18px;
   left: 9px;
@@ -39,7 +39,7 @@
   content: '';
 }
 
-.SearchBar-Button .SearchBar-IconSearch::after {
+.SearchBar-Button .SearchBar-ButtonIcon::after {
   position: absolute;
   top: 0;
   left: 0;
