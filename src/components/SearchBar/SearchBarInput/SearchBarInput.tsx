@@ -1,8 +1,9 @@
+import React, { FC } from 'react'
 import cnSearchBar from '../SearchBar.classname'
 
 import './SearchBarInput.css'
 
-const SearchBarInput = ({ getValue }) => {
+const SearchBarInput: FC = ({ getValue }) => {
   const { value, onChange } = getValue
   return (
     <input

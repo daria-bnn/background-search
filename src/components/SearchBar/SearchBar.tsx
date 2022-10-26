@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { FC, useState } from 'react'
 
 import cnSearchBar from './SearchBar.classname'
 import getImages from '../../api/getImages'
@@ -9,7 +9,7 @@ import SearchBarError from './SearchBarError/SearchBarError'
 
 import './SearchBar.css'
 
-const SearchBar = ({ getData }) => {
+const SearchBar:FC = ({ getData }) => {
   const useInputValue = useGetValue('')
 
   const [error, setError] = useState('')

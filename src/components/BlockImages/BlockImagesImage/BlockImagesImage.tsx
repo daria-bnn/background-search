@@ -1,8 +1,9 @@
+import React, { FC } from 'react'
 import cnBlockImages from '../BlockImages.classname'
 
 import './BlockImagesImage.css'
 
-const BlockImagesImage = ({ dataImg }) => {
+const BlockImagesImage: FC = ({ dataImg }) => {
   const { urls } = dataImg
   const description = dataImg.alt_description
 
