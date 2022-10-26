@@ -3,13 +3,23 @@ import cnSearchBar from '../SearchBar.classname'
 
 import './SearchBarInput.css'
 
-const SearchBarInput: FC = ({ getValue }) => {
-  const { value, onChange } = getValue
+type TSearchBarInput = {
+  value: string
+  onChange: (value: string) => void
+}
+
+const SearchBarInput: FC<TSearchBarInput> = ({ value, onChange }) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { target } = e
+
+    onChange(target.value)
+  }
+
   return (
     <input
       value={value}
       placeholder="Введите слово"
-      onChange={onChange}
+      onChange={handleChange}
       className={cnSearchBar('Input')}
     />
   )

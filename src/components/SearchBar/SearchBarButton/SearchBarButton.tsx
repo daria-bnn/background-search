@@ -1,9 +1,11 @@
+import React, { FC } from 'react'
+
 import cnSearchBar from '../SearchBar.classname'
 
 import './SearchBarButton.css'
 
-const SearchBarButton = ({ valid }) => (
-  <button type="submit" disabled={!valid} className={cnSearchBar('Button')}>
+const SearchBarButton: FC = () => (
+  <button type="submit" className={cnSearchBar('Button')}>
     <span className={cnSearchBar('ButtonIcon')} />
   </button>
 )

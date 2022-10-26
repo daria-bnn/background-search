@@ -1,7 +1,10 @@
-import './App.css'
+import React, { FC } from 'react'
+
 import SearchImagesBack from './components/SearchImagesBack/SearchImagesBack'
 
-const App = () => (
+import './App.css'
+
+const App: FC = () => (
   <div className="App">
     <SearchImagesBack />
   </div>

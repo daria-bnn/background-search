@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { FC, useState } from 'react'
 import { cn } from '@bem-react/classname'
 
 import SearchBar from '../SearchBar/SearchBar'
@@ -8,7 +8,7 @@ import './SearchImagesBack.css'
 
 const cnSearchImagesBack = cn('SearchImagesBack')
 
-const SearchImagesBack = () => {
+const SearchImagesBack: FC = () => {
   const [data, setData] = useState('')
   const [src, setSrc] = useState('')
 
@@ -30,8 +30,8 @@ const SearchImagesBack = () => {
         backgroundImage: `url(${src})`,
       }}
     >
-      <SearchBar getData={getData} />
-      {data && <BlockImages chooseBack={chooseBack} data={data} />}
+      <SearchBar />
+      {/* {data && <BlockImages chooseBack={chooseBack} data={data} />} */}
     </div>
   )
 }

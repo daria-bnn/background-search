@@ -1,40 +1,31 @@
 import React, { FC, useState } from 'react'
 
 import cnSearchBar from './SearchBar.classname'
-import getImages from '../../api/getImages'
-import useGetValue from './hooks/useGetValue'
 import SearchBarInput from './SearchBarInput/SearchBarInput'
 import SearchBarButton from './SearchBarButton/SearchBarButton'
-import SearchBarError from './SearchBarError/SearchBarError'
+import { useAppDispatch, useAppSelector } from '../../store/hooks/storeHelpers'
+import { selectError } from '../../store/selectors/photoSelectors'
+import thunkFetchPhotosUnplash from '../../store/thunks/photoThunk'
 
 import './SearchBar.css'
 
-const SearchBar:FC = ({ getData }) => {
-  const useInputValue = useGetValue('')
+const SearchBar: FC = () => {
+  const [value, setValue] = useState('')
 
-  const [error, setError] = useState('')
+  const dispatch = useAppDispatch()
+  const error = useAppSelector(selectError)
 
   const onSubmit = async (e) => {
     e.preventDefault()
 
-    getImages(useInputValue.value)
-      .then((data) => {
-        getData(data)
-      })
-      .then(() => {
-        setError('')
-      })
-      .catch((er) => {
-        setError(er.message)
-        getData('')
-      })
+    dispatch(thunkFetchPhotosUnplash(value))
   }
 
   return (
     <form onSubmit={onSubmit} className={cnSearchBar()}>
-      <SearchBarInput getValue={useInputValue} />
-      {error && <SearchBarError error={error} />}
-      <SearchBarButton valid={useInputValue.valid} />
+      <SearchBarInput value={value} onChange={setValue} />
+      {error && <div className={cnSearchBar('Error')}>{error}</div>}
+      <SearchBarButton />
     </form>
   )
 }
