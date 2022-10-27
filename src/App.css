@@ -3,7 +3,7 @@
   min-height: 100vh;
   padding-top: 40px;
   padding-right: calc(50% - 600px);
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   padding-left: calc(50% - 600px);
 
   overflow: hidden;
@@ -12,6 +12,52 @@
 
   background-color: #212129;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
+}
+
+.App-WrapperButton {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 100%;
+}
+
+.App-Button {
+  display: flex;
+  padding: 15px 30px;
+
+  color: rgb(133, 133, 133);
+
+  font-size: 14px;
+  letter-spacing: 3px;
+
+  text-align: center;
+
+  background-color: rgba(16, 16, 20, 70%);
+  border: 0.5px solid #858585;
+  border-radius: 50px;
+  outline: none;
+
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.App-Button:hover {
+  color: #fff;
+
+  border-color: #fff;
+
+  cursor: pointer;
+}
+
+.App-Button:active {
+  color: #858585;
+
+  background-color: #101014;
+  border-color: #858585;
 }
