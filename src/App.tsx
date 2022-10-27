@@ -29,15 +29,16 @@ const App: FC = () => {
       }}
     >
       <SearchImagesBack />
-      <div className="App-WrapperButton">
-        {images.length && (
+
+      {images.length ? (
+        <div className="App-WrapperButton">
           <button type="button" className="App-Button" onClick={handleShowImg}>
             {isShowImgs
               ? 'Скрыть найденные картинки'
               : 'Показать найденные картинки'}
           </button>
-        )}
-      </div>
+        </div>
+      ) : null}
     </div>
   )
 }
