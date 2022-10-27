@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-rational-order",
+    "stylelint-config-prettier",
+    "stylelint-prettier/recommended"
+  ],
+
+  "plugins": ["stylelint-order"],
+
+  "rules": {
+    "comment-no-empty": null,
+    "at-rule-no-unknown": null,
+    "font-family-no-missing-generic-family-keyword": true,
+    "selector-class-pattern": null,
+    "color-function-notation": "legacy",
+    "declaration-empty-line-before": null,
+    "order/properties-order": [],
+    "plugin/rational-order": [
+      true,
+      {
+        "border-in-box-model": false,
+        "empty-line-between-groups": true
+      }
+    ]
+  }
+}

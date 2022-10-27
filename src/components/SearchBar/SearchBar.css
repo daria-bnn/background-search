@@ -1,0 +1,15 @@
+.SearchBar {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 450px;
+  height: 70px;
+  margin-bottom: 32px;
+
+  text-align: center;
+
+  background-color: rgba(16, 16, 20, 60%);
+  border-radius: 50px;
+}

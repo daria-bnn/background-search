@@ -1,0 +1,18 @@
+.SearchBar-Input {
+  width: 100%;
+  padding-left: 35px;
+
+  color: #fff;
+  font-weight: 400;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.SearchBar-Input::placeholder {
+  color: #a8a8a8;
+}
