@@ -1,23 +1,26 @@
 # Приложение для поиска фотографий
 
+- ### Приложение доступно по [ссылке](https://daria-bnn.github.io/background-search/)
+
 ## Описание
 
+- Приложение использует официальный [Unsplash API](https://unsplash.com/developers)
 - Часть интерфейса состоит из поисковой строки, в которую следует вводить слова (по умолчанию на англ.) и кнопки по которой отправляется запрос и при успешном выполении, которого, ниже поискового бара будут отображены картинки определенной тематики (отображающие суть введенного слова).
 - Интерфейс также позволяет выбрать и установить фоном для страницы любую из полученных картинок.
 - Также есть возможности при помощи кнопки скрыть/отобразить галлерею с найденными картинками.
 
 ## Технологии
 
-> React
-> TypeScript
-> Redux, Redux Toolkit
-> CSS (БЭМ)
+> - React
+> - TypeScript
+> - Redux, Redux Toolkit
+> - CSS (БЭМ)
 
 ## Библиотеки
 
-> [React Photo Album](https://react-photo-album.com/) (для создания альбома фотографий)
-> [React Spinners](https://mhnpd.github.io/react-loader-spinner/docs/intro)
-> [bem-react-classname](https://github.com/bem/bem-react)
+> - [React Photo Album](https://react-photo-album.com/) (для создания альбома фотографий)
+> - [React Spinners](https://mhnpd.github.io/react-loader-spinner/docs/intro)
+> - [bem-react-classname](https://github.com/bem/bem-react)
 
 
 ## Как запустить проект
