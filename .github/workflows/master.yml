@@ -17,10 +17,21 @@ jobs:
     
     - name: Checkout
       uses: actions/checkout@v1
-
+    
     - name: Build
       run: |
         npm install
-        npm run deploy
+        npm run build
       env:
         REACT_APP_UNPLASH_API_KEY: ${{ secrets.REACT_APP_UNPLASH_API_KEY }}
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      run: |
+        npm install
+        npm run deploy
+      with:
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: build
+
