@@ -37,7 +37,7 @@ npm i
 ```
 
 - Для корректной работы приложения необходимо иметь API-key сервиса [Unplash](https://unsplash.com/) (получить свой уникальный ключ можно пройдя регистрацию [здесь](https://unsplash.com/developers)).
-- Полученный API-key необходимо записать в поле 'REACT_APP_UNSPLASH_API_KEY=' в файле env.example и переименовать данный файл в .env
+- Полученный API-key необходимо записать в поле 'REACT_APP_UNPLASH_API_KEY=' в созданный заранее файл .env
 
 - Запуск проекта:
 
