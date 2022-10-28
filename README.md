@@ -23,7 +23,7 @@
 > - [bem-react-classname](https://github.com/bem/bem-react)
 
 ## Особенности
-Проект заплоен на [GitHub Pages](https://pages.github.com/) с использованием инструментов CI/CD (GitHub Actions Workflow)
+Деплой на [GitHub Pages](https://pages.github.com/) с использованием инструментов CI/CD (GitHub Actions Workflow)
 
 ## Как запустить проект
 
